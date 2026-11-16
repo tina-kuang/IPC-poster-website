@@ -19,8 +19,8 @@ button{font:inherit;color:inherit}
 h1{font-size:clamp(25px,4.6vw,40px);line-height:1.15;margin:10px 0 10px}
 h2{font-size:clamp(22px,3.6vw,32px);line-height:1.15;margin:4px 0 6px}
 .chip{display:inline-block;font-size:12px;font-weight:700;background:var(--ink);color:#fff;border-radius:99px;padding:2px 9px;vertical-align:middle;margin-right:8px;position:relative;top:-3px}
-.cap{margin:0 0 12px;max-width:62ch}.cap+.note{margin-top:-6px}.ends+.note{margin-top:14px}
-.note{margin:0 0 12px;max-width:62ch;font-size:14px}
+.cap{margin:0 0 12px}.cap+.note{margin-top:-6px}.ends+.note{margin-top:14px}
+.note{margin:0 0 12px;font-size:14px}
 .life{display:grid;grid-template-columns:1fr 1fr;gap:8px;max-width:230px;margin:4px 0 14px}
 .life figure{margin:0}.lm{aspect-ratio:3/4;border-radius:12px;overflow:hidden;background:#222}
 .lm video,.lm img{display:block;width:100%;height:100%;object-fit:cover}
@@ -36,10 +36,16 @@ h2{font-size:clamp(22px,3.6vw,32px);line-height:1.15;margin:4px 0 6px}
 .auth{margin:0 0 14px;font-size:15px}
 .q{font-weight:700;font-size:clamp(17px,2.4vw,20px);border-left:5px solid var(--sq);padding:4px 0 4px 14px;margin:16px 0}
 .pair{display:grid;grid-template-columns:1fr 1fr;gap:10px}
-.media{position:relative;width:100%;aspect-ratio:var(--ar);max-height:35dvh;border-radius:14px;overflow:hidden}
+.media{position:relative;width:100%;aspect-ratio:var(--ar);max-height:31dvh;border-radius:14px;overflow:hidden}
 .sq .media{background:var(--sqbg)}.op .media{background:var(--opbg)}
 .media video,.media img{position:absolute;inset:0;width:100%;height:100%;object-fit:contain;pointer-events:none}
-.who{font-weight:700;font-size:clamp(14px,2.2vw,18px);margin:0 2px 4px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.who{display:flex;flex-wrap:wrap;align-items:center;column-gap:8px;row-gap:3px;font-weight:700;font-size:clamp(14px,2.2vw,18px);margin:0 2px 5px}
+.who b{white-space:nowrap;overflow:hidden;text-overflow:ellipsis;max-width:100%}
+.lh{font-size:clamp(11px,1.3vw,12.5px);font-weight:700;line-height:1;padding:3px 8px;border-radius:99px;border:1.5px solid currentColor;white-space:nowrap}
+.sq .lh{background:var(--sqbg)}.op .lh{background:var(--opbg)}
+.ml{position:absolute;z-index:2;display:flex;align-items:center;gap:3px;font-size:clamp(10px,1.4vw,13px);font-weight:700;color:var(--ink);line-height:1;white-space:nowrap;pointer-events:none;opacity:.82}
+.ml svg{width:1.1em;height:1.1em;flex:none;overflow:visible}
+.a-tl{top:6px;left:8px}.a-tr{top:6px;right:8px}.a-tc{top:6px;left:50%;transform:translateX(-50%)}.a-bl{bottom:6px;left:8px}.a-br{bottom:6px;right:8px}.a-bc{bottom:6px;left:50%;transform:translateX(-50%)}.a-ml{top:50%;left:8px;transform:translateY(-50%)}.a-mr{top:50%;right:8px;transform:translateY(-50%)}
 .sq .who,.sq .num{color:var(--sq)}.op .who,.op .num{color:var(--op)}
 .read{display:flex;align-items:baseline;gap:6px;margin:6px 2px 0;flex-wrap:wrap}
 .num{font-size:clamp(26px,5vw,40px);font-weight:800;line-height:1;font-variant-numeric:tabular-nums}
@@ -75,41 +81,42 @@ h2{font-size:clamp(22px,3.6vw,32px);line-height:1.15;margin:4px 0 6px}
 .pager button:disabled{opacity:.3;cursor:default}
 .pager .nx{margin-left:auto;background:var(--ink);color:#fff;border-color:var(--ink)}
 .pager .lbl{font-weight:700;font-size:14px;overflow:hidden;white-space:nowrap;text-overflow:ellipsis}
+@media (max-width:759px){.cap{font-size:15px;line-height:1.42;margin-bottom:10px}.lh{padding:2px 7px}}
 @media (min-width:760px){.pair{gap:16px}.media{max-height:40dvh}.word{font-size:17px}.bar{font-size:13px}}
 @media (prefers-reduced-motion:reduce){.deck{scroll-behavior:auto}}</style></head><body>
 <header class="top"><button class="hm" data-go="home" hidden>← Home</button><b>IPC7 · Poster #482</b><nav class="dots" aria-label="Slides"><button aria-label="Home"></button><button aria-label="Ex vivo Data Collection"></button><button aria-label="Whole foot"></button><button aria-label="Crurotalar joint"></button><button aria-label="Subtalar joint"></button><button aria-label="Transverse tarsal joint"></button><button aria-label="Mobility envelopes"></button></nav></header>
 <main class="deck" id="deck"><section class="slide" id="home" data-label="IPC7 · Poster #482"><div class="in">
 <h1>Divergent Ankle Mechanisms Underlie Hindfoot Reversal in Therian Mammals</h1><p class="auth">Duyi (Tina) Kuang &amp; Stephanie E. Pierce · Harvard University</p>
 <p class="q">Do marsupials and placentals achieve hindfoot reversal through similar or different joint-level mechanisms?</p><p class="cap">X-ray reconstructions of an Eastern gray squirrel (a placental) and a Virginia opossum (a marsupial) during hindfoot reversal.</p>
-<div class="hg"><div class="life"><figure><div class="lm"><video data-src="videos/squirrel_descend.mp4?v=202611161535" poster="img/squirrel_descend.jpg?v=202611161535" muted loop playsinline preload="none" aria-label="Eastern gray squirrel descending head-first"></video></div><figcaption>Eastern gray squirrel descending head-first<small>Video: Tina Kuang · Concord Field Station, Harvard University</small></figcaption></figure><figure><div class="lm"><img src="img/opossum_climb.jpg?v=202611161535" alt="Virginia opossum climbing"></div><figcaption>Virginia opossum climbing<small>Photo: <a href="https://commons.wikimedia.org/wiki/File:Virginia_Opossum_(Didelphis_virginiana)_(16125029514).jpg">Andrew C</a>, <a href="https://creativecommons.org/licenses/by/2.0/">CC BY 2.0</a></small></figcaption></figure></div><div class="cards"><button data-go="methods"><img src="img/thumb_methods.jpg?v=202611161535" alt="" loading="lazy"><b class="n">1</b><span><i>Ex vivo</i> Data Collection</span></button><button data-go="foot"><img src="img/thumb_foot.jpg?v=202611161535" alt="" loading="lazy"><b class="n">2</b><span>Whole foot</span></button><button data-go="crj"><img src="img/thumb_crj.jpg?v=202611161535" alt="" loading="lazy"><b class="n">3</b><span>Crurotalar joint</span></button><button data-go="stj"><img src="img/thumb_stj.jpg?v=202611161535" alt="" loading="lazy"><b class="n">4</b><span>Subtalar joint</span></button><button data-go="ttj"><img src="img/thumb_ttj.jpg?v=202611161535" alt="" loading="lazy"><b class="n">5</b><span>Transverse tarsal joint</span></button><button data-go="envelopes"><img src="img/thumb_envelopes.jpg?v=202611161535" alt="" loading="lazy"><b class="n">6</b><span>Mobility envelopes</span></button></div></div></div></section><section class="slide" id="methods" data-label="&lt;i&gt;Ex vivo&lt;/i&gt; Data Collection"><div class="in">
+<div class="hg"><div class="life"><figure><div class="lm"><video data-src="videos/squirrel_descend.mp4?v=202611161611" poster="img/squirrel_descend.jpg?v=202611161611" muted loop playsinline preload="none" aria-label="Eastern gray squirrel descending head-first"></video></div><figcaption>Eastern gray squirrel descending head-first<small>Video: Tina Kuang · Concord Field Station, Harvard University</small></figcaption></figure><figure><div class="lm"><img src="img/opossum_climb.jpg?v=202611161611" alt="Virginia opossum climbing"></div><figcaption>Virginia opossum climbing<small>Photo: <a href="https://commons.wikimedia.org/wiki/File:Virginia_Opossum_(Didelphis_virginiana)_(16125029514).jpg">Andrew C</a>, <a href="https://creativecommons.org/licenses/by/2.0/">CC BY 2.0</a></small></figcaption></figure></div><div class="cards"><button data-go="methods"><img src="img/thumb_methods.jpg?v=202611161611" alt="" loading="lazy"><b class="n">1</b><span><i>Ex vivo</i> Data Collection</span></button><button data-go="foot"><img src="img/thumb_foot.jpg?v=202611161611" alt="" loading="lazy"><b class="n">2</b><span>Whole foot</span></button><button data-go="crj"><img src="img/thumb_crj.jpg?v=202611161611" alt="" loading="lazy"><b class="n">3</b><span>Crurotalar joint</span></button><button data-go="stj"><img src="img/thumb_stj.jpg?v=202611161611" alt="" loading="lazy"><b class="n">4</b><span>Subtalar joint</span></button><button data-go="ttj"><img src="img/thumb_ttj.jpg?v=202611161611" alt="" loading="lazy"><b class="n">5</b><span>Transverse tarsal joint</span></button><button data-go="envelopes"><img src="img/thumb_envelopes.jpg?v=202611161611" alt="" loading="lazy"><b class="n">6</b><span>Mobility envelopes</span></button></div></div></div></section><section class="slide" id="methods" data-label="&lt;i&gt;Ex vivo&lt;/i&gt; Data Collection"><div class="in">
 <h2><span class="chip">Methods</span><i>Ex vivo</i> Data Collection</h2><p class="cap">The foot is manipulated through its axes: flexion–extension, inversion–eversion and adduction–abduction, followed by a final set of global manipulations.</p>
-<div class="mvid"><video data-src="videos/methods_manipulation.mp4?v=202611161535" poster="img/thumb_methods.jpg?v=202611161535" muted loop playsinline preload="none"></video></div>
+<div class="mvid"><video data-src="videos/methods_manipulation.mp4?v=202611161611" poster="img/thumb_methods.jpg?v=202611161611" muted loop playsinline preload="none"></video></div>
 </div></section><section class="slide" id="foot" data-label="Whole foot" data-row="foot"><div class="in">
-<h2><span class="chip">Hindfoot reversal</span>Whole foot</h2><p class="cap">Left hindlimbs. The tibia is pinned, and the foot&#x27;s angle is measured relative to the tibia.</p>
+<h2><span class="chip">Hindfoot reversal</span>Whole foot</h2><p class="cap">Tibia-fixed reference frame; foot rotation is calculated relative to the tibia.</p>
 <div class="pair"><figure class="pan sq" data-c="SEP120" style="margin:0">
-<div class="who">Eastern gray squirrel</div><div class="media" style="--ar:720/960">
-<video data-c="SEP120" data-src="videos/scrub_foot_SEP120.mp4?v=202611161535" poster="img/scrub_foot_SEP120.jpg?v=202611161535" muted playsinline preload="none" disableremoteplayback></video></div>
+<div class="who"><b>Eastern gray squirrel</b><span class="lh">Left hindlimb</span></div><div class="media" style="--ar:720/960">
+<video data-c="SEP120" data-src="videos/scrub_foot_SEP120.mp4?v=202611161611" poster="img/scrub_foot_SEP120.jpg?v=202611161611" muted playsinline preload="none" disableremoteplayback></video><span class="ml a-tr">lateral<svg viewBox="-6 -6 12 12" aria-hidden="true" style="transform:rotate(0deg)"><path d="M-4.5 0H4.2M1 -3.2L4.6 0L1 3.2" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg></span><span class="ml a-bl"><svg viewBox="-6 -6 12 12" aria-hidden="true" style="transform:rotate(-180deg)"><path d="M-4.5 0H4.2M1 -3.2L4.6 0L1 3.2" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg>medial</span></div>
 <div class="read"><span class="num">0°</span><span class="word">neutral</span></div>
 <div class="bar"><span class="hi"></span><span class="tr"><span class="ev"></span><span class="iv"></span><span class="z"></span><span class="mk"></span></span><span class="lo"></span></div>
 </figure><figure class="pan op" data-c="SEP93" style="margin:0">
-<div class="who">Virginia opossum</div><div class="media" style="--ar:720/960">
-<video data-c="SEP93" data-src="videos/scrub_foot_SEP93.mp4?v=202611161535" poster="img/scrub_foot_SEP93.jpg?v=202611161535" muted playsinline preload="none" disableremoteplayback></video></div>
+<div class="who"><b>Virginia opossum</b><span class="lh">Left hindlimb</span></div><div class="media" style="--ar:720/960">
+<video data-c="SEP93" data-src="videos/scrub_foot_SEP93.mp4?v=202611161611" poster="img/scrub_foot_SEP93.jpg?v=202611161611" muted playsinline preload="none" disableremoteplayback></video><span class="ml a-bl"><svg viewBox="-6 -6 12 12" aria-hidden="true" style="transform:rotate(180deg)"><path d="M-4.5 0H4.2M1 -3.2L4.6 0L1 3.2" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg>lateral</span><span class="ml a-tr">medial<svg viewBox="-6 -6 12 12" aria-hidden="true" style="transform:rotate(-0deg)"><path d="M-4.5 0H4.2M1 -3.2L4.6 0L1 3.2" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg></span></div>
 <div class="read"><span class="num">0°</span><span class="word">neutral</span></div>
 <div class="bar"><span class="hi"></span><span class="tr"><span class="ev"></span><span class="iv"></span><span class="z"></span><span class="mk"></span></span><span class="lo"></span></div>
 </figure></div>
 <div class="scrub"><button class="play" aria-label="Play"><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M3 1.5v13l11-6.5z"/></svg></button>
 <div class="trk" role="slider" tabindex="0" aria-label="Turn the foot from full eversion to full inversion" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0"><div class="rail"></div><div class="th"></div></div></div>
-<div class="ends"><span>Full eversion</span><span>Full inversion</span></div><p class="note"><b>Note:</b> Tarsals beyond the astragalus and calcaneus are shown for reference only: the beads are in the metatarsals, so motion among those tarsals isn&#x27;t captured.</p>
+<div class="ends"><span>Full eversion</span><span>Full inversion</span></div><p class="note"><b>Note:</b> Markers were implanted in the metatarsals but not in the remaining tarsals. The navicular, cuboid and cuneiforms are retained in the reconstructions for anatomical context and are animated rigidly with the metatarsals; intertarsal motion was not resolved.</p>
 </div></section><section class="slide" id="crj" data-label="Crurotalar joint" data-row="CRJ"><div class="in">
-<h2><span class="chip">CRJ</span>Crurotalar joint</h2><p class="cap">The tibia is pinned; the astragalus (yellow) moves.</p>
+<h2><span class="chip">CRJ</span>Crurotalar joint</h2><p class="cap">Tibia-fixed reference frame; rotation of the astragalus (yellow) is calculated relative to the tibia.</p>
 <div class="pair"><figure class="pan sq" data-c="SEP120" style="margin:0">
-<div class="who">Eastern gray squirrel</div><div class="media" style="--ar:600/1000">
-<video data-c="SEP120" data-src="videos/scrub_CRJ_SEP120.mp4?v=202611161535" poster="img/scrub_CRJ_SEP120.jpg?v=202611161535" muted playsinline preload="none" disableremoteplayback></video></div>
+<div class="who"><b>Eastern gray squirrel</b><span class="lh">Left hindlimb</span></div><div class="media" style="--ar:600/1000">
+<video data-c="SEP120" data-src="videos/scrub_CRJ_SEP120.mp4?v=202611161611" poster="img/scrub_CRJ_SEP120.jpg?v=202611161611" muted playsinline preload="none" disableremoteplayback></video><span class="ml a-br">lateral<svg viewBox="-6 -6 12 12" aria-hidden="true" style="transform:rotate(-1deg)"><path d="M-4.5 0H4.2M1 -3.2L4.6 0L1 3.2" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg></span><span class="ml a-tl"><svg viewBox="-6 -6 12 12" aria-hidden="true" style="transform:rotate(-181deg)"><path d="M-4.5 0H4.2M1 -3.2L4.6 0L1 3.2" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg>medial</span></div>
 <div class="read"><span class="num">0°</span><span class="word">neutral</span></div>
 <div class="bar"><span class="hi"></span><span class="tr"><span class="ev"></span><span class="iv"></span><span class="z"></span><span class="mk"></span></span><span class="lo"></span></div>
 </figure><figure class="pan op" data-c="SEP93" style="margin:0">
-<div class="who">Virginia opossum</div><div class="media" style="--ar:600/1000">
-<video data-c="SEP93" data-src="videos/scrub_CRJ_SEP93.mp4?v=202611161535" poster="img/scrub_CRJ_SEP93.jpg?v=202611161535" muted playsinline preload="none" disableremoteplayback></video></div>
+<div class="who"><b>Virginia opossum</b><span class="lh">Left hindlimb</span></div><div class="media" style="--ar:600/1000">
+<video data-c="SEP93" data-src="videos/scrub_CRJ_SEP93.mp4?v=202611161611" poster="img/scrub_CRJ_SEP93.jpg?v=202611161611" muted playsinline preload="none" disableremoteplayback></video><span class="ml a-br">lateral<svg viewBox="-6 -6 12 12" aria-hidden="true" style="transform:rotate(0deg)"><path d="M-4.5 0H4.2M1 -3.2L4.6 0L1 3.2" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg></span><span class="ml a-tl"><svg viewBox="-6 -6 12 12" aria-hidden="true" style="transform:rotate(-180deg)"><path d="M-4.5 0H4.2M1 -3.2L4.6 0L1 3.2" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg>medial</span></div>
 <div class="read"><span class="num">0°</span><span class="word">neutral</span></div>
 <div class="bar"><span class="hi"></span><span class="tr"><span class="ev"></span><span class="iv"></span><span class="z"></span><span class="mk"></span></span><span class="lo"></span></div><div class="extra"></div>
 </figure></div>
@@ -117,15 +124,15 @@ h2{font-size:clamp(22px,3.6vw,32px);line-height:1.15;margin:4px 0 6px}
 <div class="trk" role="slider" tabindex="0" aria-label="Turn the foot from full eversion to full inversion" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0"><div class="rail"></div><div class="th"></div></div></div>
 <div class="ends"><span>Full eversion</span><span>Full inversion</span></div>
 </div></section><section class="slide" id="stj" data-label="Subtalar joint" data-row="STJ"><div class="in">
-<h2><span class="chip">STJ</span>Subtalar joint</h2><p class="cap">Astragalus held still, see-through calcaneus moving. In the squirrel the facet opens (red to yellow) as the foot inverts; in the opossum it stays seated.</p><div class="gap"><span>facet gap</span><span>0</span><i style="background:linear-gradient(90deg,#67000D,#B91C1C,#EE6A2C,#F8B46A,#F5D27A)"></i><span>1.4 mm</span></div>
+<h2><span class="chip">STJ</span>Subtalar joint</h2><p class="cap">Astragalus-fixed reference frame; calcaneal rotation is calculated relative to the astragalus. The calcaneus is rendered translucent: in the squirrel the joint opens (red to yellow) during inversion, whereas in the opossum it remains apposed.</p><div class="gap"><span>facet gap</span><span>0</span><i style="background:linear-gradient(90deg,#67000D,#B91C1C,#EE6A2C,#F8B46A,#F5D27A)"></i><span>1.4 mm</span></div>
 <div class="pair"><figure class="pan sq" data-c="SEP120" style="margin:0">
-<div class="who">Eastern gray squirrel</div><div class="media" style="--ar:960/768">
-<video data-c="SEP120" data-src="videos/scrub_STJ_SEP120.mp4?v=202611161535" poster="img/scrub_STJ_SEP120.jpg?v=202611161535" muted playsinline preload="none" disableremoteplayback></video></div>
+<div class="who"><b>Eastern gray squirrel</b><span class="lh">Left hindlimb</span></div><div class="media" style="--ar:960/768">
+<video data-c="SEP120" data-src="videos/scrub_STJ_SEP120.mp4?v=202611161611" poster="img/scrub_STJ_SEP120.jpg?v=202611161611" muted playsinline preload="none" disableremoteplayback></video><span class="ml a-tr">lateral<svg viewBox="-6 -6 12 12" aria-hidden="true" style="transform:rotate(-58deg)"><path d="M-4.5 0H4.2M1 -3.2L4.6 0L1 3.2" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg></span><span class="ml a-bl"><svg viewBox="-6 -6 12 12" aria-hidden="true" style="transform:rotate(-238deg)"><path d="M-4.5 0H4.2M1 -3.2L4.6 0L1 3.2" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg>medial</span></div>
 <div class="read"><span class="num">0°</span><span class="word">neutral</span></div>
 <div class="bar"><span class="hi"></span><span class="tr"><span class="ev"></span><span class="iv"></span><span class="z"></span><span class="mk"></span></span><span class="lo"></span></div>
 </figure><figure class="pan op" data-c="SEP93" style="margin:0">
-<div class="who">Virginia opossum</div><div class="media" style="--ar:960/768">
-<video data-c="SEP93" data-src="videos/scrub_STJ_SEP93.mp4?v=202611161535" poster="img/scrub_STJ_SEP93.jpg?v=202611161535" muted playsinline preload="none" disableremoteplayback></video></div>
+<div class="who"><b>Virginia opossum</b><span class="lh">Left hindlimb</span></div><div class="media" style="--ar:960/768">
+<video data-c="SEP93" data-src="videos/scrub_STJ_SEP93.mp4?v=202611161611" poster="img/scrub_STJ_SEP93.jpg?v=202611161611" muted playsinline preload="none" disableremoteplayback></video><span class="ml a-tr">lateral<svg viewBox="-6 -6 12 12" aria-hidden="true" style="transform:rotate(-73deg)"><path d="M-4.5 0H4.2M1 -3.2L4.6 0L1 3.2" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg></span><span class="ml a-bl"><svg viewBox="-6 -6 12 12" aria-hidden="true" style="transform:rotate(-253deg)"><path d="M-4.5 0H4.2M1 -3.2L4.6 0L1 3.2" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg>medial</span></div>
 <div class="read"><span class="num">0°</span><span class="word">neutral</span></div>
 <div class="bar"><span class="hi"></span><span class="tr"><span class="ev"></span><span class="iv"></span><span class="z"></span><span class="mk"></span></span><span class="lo"></span></div>
 </figure></div>
@@ -133,21 +140,21 @@ h2{font-size:clamp(22px,3.6vw,32px);line-height:1.15;margin:4px 0 6px}
 <div class="trk" role="slider" tabindex="0" aria-label="Turn the foot from full eversion to full inversion" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0"><div class="rail"></div><div class="th"></div></div></div>
 <div class="ends"><span>Full eversion</span><span>Full inversion</span></div>
 </div></section><section class="slide" id="ttj" data-label="Transverse tarsal joint" data-row="TTJ"><div class="in">
-<h2><span class="chip">TTJ</span>Transverse tarsal joint</h2><p class="cap">The astragalus is pinned.</p>
+<h2><span class="chip">TTJ</span>Transverse tarsal joint</h2><p class="cap">Astragalus-fixed reference frame; forefoot rotation is calculated relative to the calcaneus.</p>
 <div class="pair"><figure class="pan sq" data-c="SEP120" style="margin:0">
-<div class="who">Eastern gray squirrel</div><div class="media" style="--ar:720/960">
-<video data-c="SEP120" data-src="videos/scrub_TTJ_SEP120.mp4?v=202611161535" poster="img/scrub_TTJ_SEP120.jpg?v=202611161535" muted playsinline preload="none" disableremoteplayback></video></div>
+<div class="who"><b>Eastern gray squirrel</b><span class="lh">Left hindlimb</span></div><div class="media" style="--ar:720/960">
+<video data-c="SEP120" data-src="videos/scrub_TTJ_SEP120.mp4?v=202611161611" poster="img/scrub_TTJ_SEP120.jpg?v=202611161611" muted playsinline preload="none" disableremoteplayback></video><span class="ml a-bl"><svg viewBox="-6 -6 12 12" aria-hidden="true" style="transform:rotate(-169deg)"><path d="M-4.5 0H4.2M1 -3.2L4.6 0L1 3.2" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg>lateral</span><span class="ml a-tr">medial<svg viewBox="-6 -6 12 12" aria-hidden="true" style="transform:rotate(-349deg)"><path d="M-4.5 0H4.2M1 -3.2L4.6 0L1 3.2" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg></span></div>
 <div class="read"><span class="num">0°</span><span class="word">neutral</span></div>
 <div class="bar"><span class="hi"></span><span class="tr"><span class="ev"></span><span class="iv"></span><span class="z"></span><span class="mk"></span></span><span class="lo"></span></div>
 </figure><figure class="pan op" data-c="SEP93" style="margin:0">
-<div class="who">Virginia opossum</div><div class="media" style="--ar:720/960">
-<video data-c="SEP93" data-src="videos/scrub_TTJ_SEP93.mp4?v=202611161535" poster="img/scrub_TTJ_SEP93.jpg?v=202611161535" muted playsinline preload="none" disableremoteplayback></video></div>
+<div class="who"><b>Virginia opossum</b><span class="lh">Left hindlimb</span></div><div class="media" style="--ar:720/960">
+<video data-c="SEP93" data-src="videos/scrub_TTJ_SEP93.mp4?v=202611161611" poster="img/scrub_TTJ_SEP93.jpg?v=202611161611" muted playsinline preload="none" disableremoteplayback></video><span class="ml a-bl"><svg viewBox="-6 -6 12 12" aria-hidden="true" style="transform:rotate(152deg)"><path d="M-4.5 0H4.2M1 -3.2L4.6 0L1 3.2" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg>lateral</span><span class="ml a-tc">medial<svg viewBox="-6 -6 12 12" aria-hidden="true" style="transform:rotate(-28deg)"><path d="M-4.5 0H4.2M1 -3.2L4.6 0L1 3.2" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg></span></div>
 <div class="read"><span class="num">0°</span><span class="word">neutral</span></div>
 <div class="bar"><span class="hi"></span><span class="tr"><span class="ev"></span><span class="iv"></span><span class="z"></span><span class="mk"></span></span><span class="lo"></span></div>
 </figure></div>
 <div class="scrub"><button class="play" aria-label="Play"><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M3 1.5v13l11-6.5z"/></svg></button>
 <div class="trk" role="slider" tabindex="0" aria-label="Turn the foot from full eversion to full inversion" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0"><div class="rail"></div><div class="th"></div></div></div>
-<div class="ends"><span>Full eversion</span><span>Full inversion</span></div><p class="note"><b>Note:</b> Tarsals beyond the astragalus and calcaneus are shown for reference only: the beads are in the metatarsals, so motion among those tarsals isn&#x27;t captured.</p>
+<div class="ends"><span>Full eversion</span><span>Full inversion</span></div><p class="note"><b>Note:</b> Markers were implanted in the metatarsals but not in the remaining tarsals, which are retained for anatomical context and animated rigidly with the metatarsals. Transverse tarsal joint angles therefore incorporate any intertarsal motion.</p>
 </div></section><section class="slide" id="envelopes" data-label="Mobility envelopes"><div class="in">
 <h2>Mobility envelopes</h2><p class="cap">Drag to rotate.</p>
 <div class="tabs" role="group" aria-label="Joint"><button data-r="foot" aria-pressed="true">Whole foot</button><button data-r="CRJ">Crurotalar joint</button><button data-r="STJ">Subtalar joint</button><button data-r="TTJ">Transverse tarsal joint</button></div>
@@ -244,7 +251,7 @@ function Env(sec){let ready=false;const COL={SEP120:'#B0203A',OPP:'#33689E'},NAM
     sec.querySelectorAll('.tabs button').forEach(b=>b.setAttribute('aria-pressed',b.dataset.r===row));}
   sec.querySelectorAll('.tabs button').forEach(b=>b.onclick=()=>{row=b.dataset.r;if(ready)draw();});
   sec.querySelectorAll('.sp button').forEach(b=>b.onclick=()=>{on[b.dataset.c]=!on[b.dataset.c];b.setAttribute('aria-pressed',on[b.dataset.c]);if(ready)draw();});
-  let loading=null;const ld=()=>loading||(loading=add('assets/plotly-gl3d.min.js').then(()=>add('assets/hulls.js'+(location.protocol.startsWith('http')?'?v=202611161535':''))).then(()=>{ready=true;}));
+  let loading=null;const ld=()=>loading||(loading=add('assets/plotly-gl3d.min.js').then(()=>add('assets/hulls.js'+(location.protocol.startsWith('http')?'?v=202611161611':''))).then(()=>{ready=true;}));
   return{pre:ld,on(){ld().then(()=>{draw();Plotly.Plots.resize('plot');});},off(){}};}
 slides.forEach(s=>{if(s.dataset.row)s._ctl=Joint(s);else if(s.id==='methods'||s.id==='home')s._ctl=Clip(s);else if(s.id==='envelopes')s._ctl=Env(s);});
 const start=Math.max(0,slides.findIndex(s=>'#'+s.id===location.hash));
